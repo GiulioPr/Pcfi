@@ -1,3 +1,5 @@
 *.jpg
 *.txt
 *checkpoint*
+*pycache*
+*.pyc
