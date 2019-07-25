@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{Pearson1900}
+K.~Pearson.
+\newblock On the criterion that a given system of deviations from the probable
+  in the case of a correlated system of variables is such that it can be
+  reasonably supposed to have arisen from random sampling.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 50(302):157--175, 1900.
+
+\bibitem{CressieRead1984}
+N.~Cressie and T.~R.~C. Read.
+\newblock Multinomial goodness-of-fit tests.
+\newblock {\em J R Stat Soc Series B Stat Methodol}, 46(3):440--464, 1984.
+
+\bibitem{Marchingo2016}
+J.~M. Marchingo, G.~Prevedello, A.~Kan, S.~Heinzel, P.~D. Hodgkin, and K.~R.
+  Duffy.
+\newblock T-cell stimuli independently sum to regulate an inherited clonal
+  division fate.
+\newblock {\em Nat Commun}, 7:13540, 2016.
+
+\bibitem{Marchingo2014}
+J.~M. Marchingo, A.~Kan, R.~M. Sutherland, K.~R. Duffy, C.~J. Wellard, G.~T.
+  Belz, A.~M. Lew, M.~R. Dowling, S.~Heinzel, and P.~D. Hodgkin.
+\newblock {Antigen affinity, costimulation, and cytokine inputs sum linearly to
+  amplify T cell expansion}.
+\newblock {\em Science}, 346:1123--1127, 2014.
+
+\bibitem{NivolumabIpilimumab2013}
+J.~D. Wolchok, H.~Kluger, M.~K. Callahan, M.~A. Postow, N.~A. Rizvi, A.~M.
+  Lesokhin, N.~H. Segal, C.~E. Ariyan, R.~Gordon, K.~Reed, M.~M. Burke,
+  A.~Caldwell, S.~A. Kronenberg, B.~U. Agunwamba, X.~Zhang, I.~Lowy, H.~D.
+  Inzunza, W.~Feely, C.~E. Horak, Q.~Hong, A.~J. Korman, J.~M. Wigginton,
+  A.~Gupta, and M.~Sznol.
+\newblock {Nivolumab plus Ipilimumab in advanced melanoma}.
+\newblock {\em N Engl J Med}, 369(2):122--133, 2013.
+
+\bibitem{NatureMed2017}
+Editorial.
+\newblock Rationalizing combination therapies.
+\newblock {\em Nat Med}, 23:1113, 10 2017.
+
+\bibitem{MooreSpruill1975}
+D.~S. Moore and M.~C. Spruill.
+\newblock {Unified large-sample theory of general chi-squared statistics for
+  tests of fit}.
+\newblock {\em Ann Stat}, 3(3):599--616, 1975.
+
+\bibitem{Moore1977}
+D.~S. Moore.
+\newblock {Generalized inverses, Wald’s method, and the construction of
+  chi-squared tests of fit}.
+\newblock {\em J Am Stat Assoc}, 72(357):131--137, 1977.
+
+\bibitem{MooreMihalko1980}
+D.~P. Mihalko and D.~S. Moore.
+\newblock {Chi-square tests of fit for type II censored data}.
+\newblock {\em Ann Stat}, 8(3):625--644, 1980.
+
+\bibitem{Moore1982}
+D.~S. Moore.
+\newblock {The effect of dependence on chi squared tests of fit}.
+\newblock {\em Ann Stat}, 10(4):1163--1171, 1982.
+
+\bibitem{Wald1943}
+A.~Wald.
+\newblock Tests of statistical hypotheses concerning several parameters when
+  the number of observations is large.
+\newblock {\em Trans Am Math Soc}, 54(3):426--482, 1943.
+
+\bibitem{Hadi1990}
+A.~S. Hadi and M.~T. Wells.
+\newblock A note on generalized {W}ald's method.
+\newblock {\em Metrika}, 37(1):309--315, 1990.
+
+\bibitem{Vuong1987}
+Q.~H. Vuong.
+\newblock {Generalized inverses and asymptotic properties of Wald tests}.
+\newblock {\em Econ Lett}, 24(4):343--347, 1987.
+
+\bibitem{Andrews1987}
+D.~W.~K. Andrews.
+\newblock {Asymptotic results for generalized Wald tests}.
+\newblock {\em Econ Theory}, 3(3):348--358, 1987.
+
+\bibitem{Andrews1988}
+D.~W.~K. Andrews.
+\newblock Chi-square diagnostic tests for econometric models: Introduction and
+  applications.
+\newblock {\em J Econom}, 37(1):135--156, 1988.
+
+\bibitem{WilsonKoehler1991}
+J.~R. Wilson and K.~J. Koehler.
+\newblock Hierarchical models for cross-classified overdispersed multinomial
+  data.
+\newblock {\em J Bus Econ Stat}, 9(1):103--110, 1991.
+
+\bibitem{Zhang1999}
+B.~Zhang.
+\newblock A chi-squared goodness-of-fit test for logistic regression models
+  based on case-control data.
+\newblock {\em Biometrika}, 86(3):531--539, 1999.
+
+\bibitem{Tyler1981}
+D.~E. Tyler.
+\newblock Asymptotic inference for eigenvectors.
+\newblock {\em Ann Stat}, 9(4):725--736, 1981.
+
+\bibitem{Drost1989}
+F.~C. Drost.
+\newblock Generalized chi-square goodness-of-fit tests for location-scale
+  models when the number of classes tends to infinity.
+\newblock {\em Ann Stat}, 17(3):1285--1300, 1989.
+
+\bibitem{Vonta2008}
+V.~Voinov, A.~Roza, and N.~Pya.
+\newblock Recent achievements in modified chi-squared goodness-of-fit testing.
+\newblock In F.~Vonta, M.~Nikulin, N.~Limnios, and C.~Huber-Carol, editors,
+  {\em {Statistical Models and Methods for Biomedical and Technical Systems}}.
+  2008.
+
+\bibitem{Hamedani2013}
+G.~G. Hamedani.
+\newblock Sub-independence: An expository perspective.
+\newblock {\em Communications in Statistics -- Theory and Methods},
+  42(3):3615--3638, 2013.
+
+\end{thebibliography}

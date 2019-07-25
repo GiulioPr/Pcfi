@@ -1,0 +1,133 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage[font={scriptsize,it}]{caption}
+%\usepackage{relsize}
+%\usepackage{float}
+%\usepackage{scalerel}
+
+\usepackage{amsmath,graphicx,amsthm,amsfonts}
+\usepackage{mathtools,amssymb,bbm,cite,bm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{fact}{Fact}
+
+\setlength{\oddsidemargin}{0.1in}
+\setlength{\textwidth}{6in}
+\setlength{\textheight}{9in}
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{-0.5in}
+
+\bibliographystyle{unsrt} %unsrt or alpha
+
+\newcommand{\Rnk}[1]{\ensuremath{\operatorname{rk}\!\left(#1\right)}}
+\newcommand{\Img}[1]{\ensuremath{\operatorname{Im}\!\left(#1\right)}}
+\newcommand{\Ker}[1]{\ensuremath{\operatorname{Ker}\!\left(#1\right)}}
+\newcommand{\Nul}[1]{\ensuremath{\operatorname{nul}\!\left(#1\right)}}
+\newcommand{\Asy}[2]{\ensuremath{\underset{#1 \to #2}{\sim}}}
+\newcommand{\Pro}[1]{\ensuremath{\mathbbm{P}\!\left(#1\right)}}
+\newcommand{\Tmat}[1]{\ensuremath{\matr{T}(#1)}}
+\newcommand{\Smat}[1]{\ensuremath{\matr{\Sigma}(#1)}}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand{\vect}[1]{\bm{#1}}
+\newcommand{\matr}[1]{\bm{#1}}
+
+
+\begin{document}
+
+\title{\textbf{Title}}
+
+\author{Giulio Prevedello\footnote{
+		Corresponding author. Electronic address: p.giulio@hotmail.it}
+	\and
+	Eric Cramer\footnote{
+		Electronic address: cramerericm@gmail.com}
+	\and
+	Felice Alessio Bava\footnote{
+		Electronic address: alessio.bava@gmail.com}\\ \\
+}
+\date{
+	Institut Curie, PSL Research University,\\ CNRS UMR 3348, Orsay, France\\
+	\medskip
+	\today
+}
+
+\maketitle
+
+\begin{abstract}
+	Abstract\\
+	\\
+	\textbf{Keywords:} key1 $\cdot$ key2 \\
+	\\
+	\textbf{Mathematics Subject Classification:} If $\cdot$ Needed
+	\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Problem: field of biology, surge of highly multiplexed experimental protocols capable of recovering thousands of cells from which several measurements are obtained. This poses a challenge to analyse this multidimensional data. To do so, people recur to Machine Learning (ML) techniques, in order to investigate the data for structures that have biological relevance.
+
+An ML method that fits the data can detect data structures that can then be challenged for biological relevance, thus helping researchers in their investigation.
+
+Examples (Kara Davis's paper, and Garry Nolan's in general)
+
+Feature selection is one of the desirable features. You run an experiment for several markers to classify cell types, you want to know which are the most relevant that should be retained in a follow up experiment (eventually with lower multplexing power) to optimise the cell classification.
+
+As cells are often classified by gating (describe gating), RF classification is an automatic routine that mimics gating. Although at present no automatic routine outperformes expert gating, thanks to the similarity with gating RF findings can be integrated, interpreted, verified with more ease from researchers.
+
+The metrics in output must also be well-defined in unbalanced data, where ofter rare populations are very important in the investigation.
+
+For these reasons we aim at provide further explainability to the RF classifier by redefining feature importance.
+Must be theoretically sounding -> proper definition
+Be explainable -> plots that provide better understanding of the impact of feature to the class prediction in the model, even for non machine learning experts.
+Useful statistic -> on which researchers can base their feature selection decision to select for the top predicting features, tailored for specific classes of interest.
+
+
+[RECYCLE] In particular, the recursive thresholding in Random Forest (RF) mirrors cytometry gating to classify data, still underperfomed by automatic solution that have difficulties in dealing with biological variability while taking previous field knowledge into account.
+
+Background, Context, State-of-Art
+
+Why we did this
+
+What we did-Paper structure
+
+
+\section{Formal Definition}\label{sec:conv_stat}
+We seek to define a new measure for feature importance
+that do this
+as opposed to the what we call Global Importance
+
+\section{Illustrative application to wine data}\label{sec:matrix_rank}
+
+Explain model: heatmap and expression figures
+Feature importance profile across classes -> high average for globally important features; large standard deviation for features with different impact among classes
+Comparison with global importance
+
+\section{Feature selection}\label{sec:pow_comp}
+Feature importance distribution within each class
+Comparison with features selected via global importance
+%\begin{figure}
+%	\begin{center}
+%		\includegraphics[width=\textwidth]{Fig1}
+%	\end{center}
+%	\caption{}\label{fig:h0_pow}
+%\end{figure}
+
+\section{Discussion}\label{sec:discussion}
+Recap problem.
+What we achieve
+
+\section*{Acknowledgements}
+The research leading to these results has received funding from REF.
+On behalf of all authors, the corresponding author states that there is no conflict of interest.
+
+%\clearpage
+\bibliography{Bibliography}
+
+
+\end{document}
