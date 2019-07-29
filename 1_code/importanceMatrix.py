@@ -2,6 +2,17 @@
 
 import numpy as np
 
+def f_gini(v):
+    p = v/v.sum()
+    return np.multiply(p, 1-p).sum()
+
+def f_entropy(v):
+    return sps.entropy(pk=v)
+
+def f_misclassification(v):
+    p = v/v.sum()
+    return 1 - p.max()
+
 def calcImportanceMatrix(rf_clf):
     """
     Calculates the importance matrix of predictors for each class.
