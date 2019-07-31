@@ -68,9 +68,12 @@
 	\textbf{Mathematics Subject Classification:} If $\cdot$ Needed
 	\end{abstract}
 
-\section{Introduction}
-\label{sec:intro}
-Problem: field of biology, surge of highly multiplexed experimental protocols capable of recovering thousands of cells from which several measurements are obtained. This poses a challenge to analyse this multidimensional data. To do so, people recur to Machine Learning (ML) techniques, in order to investigate the data for structures that have biological relevance.
+\section{Introduction}\label{sec:intro}
+In the past decades, the field of biology has witnessed a surge of new experimental techniques that measure hundreds of markers from thousands of cells, thus posing a challenge to analyse this multidimensional data. To analyse s a consequence, a call for new quantitative methods 
+
+MUST DEFINE HERE X AND Y FOR THE CLASSIFICATION PROBLEM
+
+Problem: field of biology, surge of highly multiplexed experimental protocols capable of recovering thousands of cells from which several measurements are obtained. This poses a challenge to analyse this multidimensional data. To do so, people recur to Machine Learning (ML) to identify markers that have biological relevance.
 
 An ML method that fits the data can detect data structures that can then be challenged for biological relevance, thus helping researchers in their investigation.
 
@@ -78,29 +81,42 @@ Examples (Kara Davis's paper, and Garry Nolan's in general)
 
 Feature selection is one of the desirable features. You run an experiment for several markers to classify cell types, you want to know which are the most relevant that should be retained in a follow up experiment (eventually with lower multiplexing power) to optimise the cell classification.
 
-As cells are often classified by gating (describe gating), RF classification is an automatic routine that mimics gating. Although at present no automatic routine outperformes expert gating, thanks to the similarity with gating RF findings can be integrated, interpreted, verified with more ease from researchers.
+As cells are often classified by gating (describe gating), RF classification is an automatic routine that mimics gating. Although at present no automatic routine outperforms expert gating, thanks to the similarity with gating RF findings can be integrated, interpreted, verified with more ease from researchers.
 
-The metrics in output must also be well-defined in unbalanced data, where ofter rare populations are very important in the investigation.
+If a ML model provides shows that an accurate prediction is achievable, it is of great interest to extrapolate which features contribute to the discrimination of one class form the others.  
 
-For these reasons we aim at provide further explainability to the RF classifier by redefining feature importance.
-Must be theoretically sounding -> proper definition
-Be explainable -> plots that provide better understanding of the impact of feature to the class prediction in the model, even for non machine learning experts.
-Useful statistic -> on which researchers can base their feature selection decision to select for the top predicting features, tailored for specific classes of interest.
+There are several of these metrics, but few are backed up by theoretical results and may suffer in the case of unbalanced data.
+
+What we seek in particular is to define a measure of that is per-class. In particular, must be robust in the case of unbalanced dataset, considering that in biology ofter rare classes (i.e. rare cell types) are of great interest.
+
+To guide feature selection and to improve explanability in the RF classifier, we defined feature importance on a per-class basis, as a modification of the MDI feature importance (REF). This method is then applied to a classical dataset with unbalanced to illustrate the information that can be extrapolated from the RF and comparing different strategies for feature selection (REF).
+
+
 
 
 [RECYCLE] In particular, the recursive thresholding in Random Forest (RF) mirrors cytometry gating to classify data, still underperfomed by automatic solution that have difficulties in dealing with biological variability while taking previous field knowledge into account.
 
-Background, Context, State-of-Art
-
-Why we did this
-
-What we did-Paper structure
 
 
-\section{Formal Definition}\label{sec:conv_stat}
-We seek to define a new measure for feature importance
-that do this
-as opposed to the what we call Global Importance
+\section{Formal definition}\label{sec:conv_stat}
+To define a measure how much each feature contributes to the prediction of one class, we follow the rationale behind the feature importance measured via mean importance decrease (MDI), which we now recall after introducing some notation as in REF.
+RF is represented by a collection of decision trees (Ti)i, where each decision tree is define by a rooted binary tree graph Ti = (Vi,Ei), whose nodes either have a left and right child, otherwise are leaves. Set of leaf node DEF. 
+Each node is associated to a vector v.
+As the root node is associated to v $=$ all data, at each non-leaf node a decision made based on a threshold t and one of the features j so that all data in v are passed to the left child if RULE, to the right child otherwise.
+For the RF, the such feature j and threshold t are determined so to maximize the impurity decrease, or gain,
+delta i DEF,
+where i is a measure for impurity such as the Gini or the Entropy.
+Then, the variables v reaching a leaf node determines the class that is predicted in the portion of features' space identified by all the nested decisions from the nodes in the path that join the root to such leaf. IMPROVE THIS
+
+The decision tree's importance for a given feature j, is calculated as the sum the impurity gains over all nodes, that is
+EQ.
+Form hereafter we refer to the vector I = Ij as global feature importance. 
+
+We reason that, if Ij is the contribution the feature j to the overall prediction, the importance of j with respect to one class c must derive from the contributions of only those nodes whose downstream leaves predict class c.
+MA BISOGNA CAMBIARE la DEF DI IMPURITY GAIN.
+SPEGARE COSA QUESTO COMPORTA, COL DISEGNINO.
+  
+
 
 \section{Application to dermatology data}\label{sec:matrix_rank}
 
