@@ -112,11 +112,24 @@ The decision tree's importance for a given feature j, is calculated as the sum t
 EQ.
 Form hereafter we refer to the vector I = Ij as global feature importance. 
 
-We reason that, if Ij is the contribution the feature j to the overall prediction, the importance of j with respect to one class c must derive from the contributions of only those nodes whose downstream leaves predict class c.
-MA BISOGNA CAMBIARE la DEF DI IMPURITY GAIN.
-SPEGARE COSA QUESTO COMPORTA, COL DISEGNINO.
-  
+We reason that, if Ij is the contribution the feature j to the overall prediction, the importance of j with respect to a class c must account for the contribution of only those nodes having at least one downstream leaf predicting class c.
+must be determined by the sequence of splits that ultimately predict a portion of the space being labeled as c. Thus the feature importance relative to c accounts for the contribution of those, and only those, nodes having at least one downstream leaf assigned to the class c.
 
+Moreover, from the perspective of a single class c, the node impurity should be affected only by the presence of variables that are not labeled to c, whichever their class. To this end, the impurity function i is replaced by the 
+EQ of ic.
+
+Finally, the per-class importance matrix, for the decision tree T, is defined as
+Icj
+for every class c in C and feature f in F.
+ALGORITHM
+Normalisation TO DO
+Unbalanced data. TO DO
+
+From equation REF, we remark that the feature importance vector relative to the class c, Ic, represents the global feature importance for the decision tree T with two classes, c and other-than-c. This property is evidenced in Figure 1 REF, which illustrates the algorithm for the per-class importance matrix, from one decision tree, as described.
+
+DISEGNO
+
+For ensemble learning methods that are defined by set of decision trees, such as RF, the importance matrix is calculated as the average of importance matrices across its trees, similarly as for the global feature importance REF.
 
 \section{Application to dermatology data}\label{sec:matrix_rank}
 
@@ -126,12 +139,12 @@ Comparison with global importance
 
 \subsection{Detailed model explanation}\label{subsec:explanability}
 
-\subsection{Per-class feature ranking}\label{subsec:feature_selection}
+\subsection{Per-class feature importance}\label{subsec:feature_selection}
 Feature importance distribution within each class
 Comparison with features selected via global importance
 %\begin{figure}
 %	\begin{center}
-%		\includegraphics[width=\textwidth]{Fig1}
+%		\includegraphics[width=\textwidth]{Figures/importance_matrix.pdf}
 %	\end{center}
 %	\caption{}\label{fig:h0_pow}
 %\end{figure}
