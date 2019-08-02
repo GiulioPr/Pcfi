@@ -41,7 +41,7 @@
 
 \begin{document}
 
-\title{\textbf{Title}}
+\title{\textbf{Per-class feature importance}}
 
 \author{Giulio Prevedello\footnote{
 		Corresponding author. Electronic address: p.giulio@hotmail.it}
@@ -68,7 +68,7 @@
 	\textbf{Mathematics Subject Classification:} If $\cdot$ Needed
 	\end{abstract}
 
-\section{Introduction}\label{sec:intro}
+\section{Introduction}\label{sec:introduction}
 In the past decades, the field of biology has witnessed a surge of new experimental techniques that measure hundreds of markers from thousands of cells, thus posing a challenge to analyse this multidimensional data. To analyse s a consequence, a call for new quantitative methods 
 
 MUST DEFINE HERE X AND Y FOR THE CLASSIFICATION PROBLEM
@@ -98,7 +98,7 @@ To guide feature selection and to improve explanability in the RF classifier, we
 
 
 
-\section{Formal definition}\label{sec:conv_stat}
+\section{Formal definition}\label{sec:definition}
 To define a measure how much each feature contributes to the prediction of one class, we follow the rationale behind the feature importance measured via mean importance decrease (MDI), which we now recall after introducing some notation as in REF.
 RF is represented by a collection of decision trees (Ti)i, where each decision tree is define by a rooted binary tree graph Ti = (Vi,Ei), whose nodes either have a left and right child, otherwise are leaves. Set of leaf node DEF. 
 Each node is associated to a vector v.
@@ -120,26 +120,27 @@ EQ of ic.
 
 Finally, the per-class importance matrix, for the decision tree T, is defined as
 Icj
-for every class c in C and feature f in F.
+for every class c in C and feature j in F.
 ALGORITHM
+
 Normalisation TO DO
 Unbalanced data. TO DO
 
 From equation REF, we remark that the feature importance vector relative to the class c, Ic, represents the global feature importance for the decision tree T with two classes, c and other-than-c. This property is evidenced in Figure 1 REF, which illustrates the algorithm for the per-class importance matrix, from one decision tree, as described.
 
+In particular, being Ic is normalized in EQ REF so that the sum of its entries equals one, it is suited to represent feature importance for one class and to compare feature importance vectors between classes, in the case of imbalanced datasets.
+
 DISEGNO
 
 For ensemble learning methods that are defined by set of decision trees, such as RF, the importance matrix is calculated as the average of importance matrices across its trees, similarly as for the global feature importance REF.
 
-\section{Application to dermatology data}\label{sec:matrix_rank}
+\section{Improved explainability}\label{sec:explanability}
 
 Explain model: heatmap and expression figures
 Feature importance profile across classes -> high average for globally important features; large standard deviation for features with different impact among classes
 Comparison with global importance
 
-\subsection{Detailed model explanation}\label{subsec:explanability}
-
-\subsection{Per-class feature importance}\label{subsec:feature_selection}
+\section{Feature selection strategies}\label{subsec:feature_selection}
 Feature importance distribution within each class
 Comparison with features selected via global importance
 %\begin{figure}
