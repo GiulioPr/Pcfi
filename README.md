@@ -6,3 +6,13 @@ Random Forrest classifiers are accurate and effective, but often difficult to in
 ## Data used in project
 [Wine dataset](https://archive.ics.uci.edu/ml/datasets/wine) taken from the UCI Machine Learning Repository and Sci-Kit Learn.  
 [Iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) taken from Sci-Kit Learn.
+
+
+PROCEDURE DESCRIPTION:
+i.e. as feature importance on one class against all others
+
+* Iris dataset + dermatology dataset as examples for pcfi use
+RES: Nice plots to draw feature selection and understand data+model
+
+* Benchmark as systematic comparison between global vs pcfi vs shap, and pcfi vs shap on rare class
+RES: Close 
