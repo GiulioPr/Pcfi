@@ -3,6 +3,7 @@
 *checkpoint*
 *pycache*
 *.pyc
+*DS_Store
 2_docs/Literature
 2_docs
 1_code/temp
