@@ -104,7 +104,7 @@ def calcImportanceMatrix(rf_clf):
                 left_node = nodes[current_node['left_child']]
                 right_node = nodes[current_node['right_child']]
                 current_feature = current_node['feature']
-                ###NEW HERE
+                
                 current_values = values_sorted[current_i,0,:]
                 left_values = values_sorted[current_node['left_child'],0,:]
                 right_values = values_sorted[current_node['right_child'],0,:]
