@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Cramer"
+  given-names: "Eric"
+  orcid: "https://orcid.org/0000-0003-2085-3679"
+- family-names: "Prevedello"
+  given-names: "Giulio"
+  orcid: "https://orcid.org/0000-0002-9857-2351"
+title: "Per-Class Feature Importance"
+version: 1.0.0
+doi: 10.5281/zenodo.11623687
+date-released: 2020-08-22
+url: "https://github.com/GiulioPr/Pcfi"
